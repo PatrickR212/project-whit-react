@@ -1,0 +1,110 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor del formulario */
+.contact-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.contact-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid #4f46e5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Labels */
+.contact-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.contact-input:focus + .contact-label,
+.contact-textarea:focus + .contact-label {
+  color: #4f46e5;
+}
+
+/* Inputs */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.2);
+  outline: none;
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Botón */
+.contact-button {
+  background: #4f46e5;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #4338ca;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+}

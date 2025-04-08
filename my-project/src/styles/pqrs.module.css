@@ -1,0 +1,31 @@
+/*-----------------CONTAINER-------------------*/
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--color-background);
+
+    display: flex;
+}
+
+
+/*-----------------MAP-------------------*/
+.intro{
+    width: 50%;
+}
+
+
+
+/*---------------FORM---------------------*/
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    text-align: center;
+    color: var(--color)
+}

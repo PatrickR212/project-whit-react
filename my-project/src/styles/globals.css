@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Variables globales */
+:root {
+    --background-color-body: #282F44;
+    --background-color-navar: #191D32;
+    --color-family: #f0f0f0;
+    --font-family: 'Roboto', sans-serif;
+    --foreground: #ededed;
+    --background: #0a0a0a;
+}
+
+/* Estilos globales */
+body {
+  padding-top: 80px; /* Ajustar según la altura del navbar */
+  background-color: var(--background-color-body);
+  color: var(--foreground);
+  font-family: var(--font-family);
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset y box-sizing */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Modo oscuro basado en preferencias del sistema */
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+    }
+}
+
+
+/* Estilos para el carrito */
+.cart-item-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  .cart-item-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms ease-in;
+  }
+  .cart-item-exit {
+    opacity: 1;
+  }
+  .cart-item-exit-active {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 300ms ease-in;
+  }
+  
+  /* Botones de cantidad */
+  .btn-quantity {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+  }
+  
+  /* Efecto hover para los items del carrito */
+  .cart-item:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+  }
