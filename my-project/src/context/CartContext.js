@@ -21,16 +21,27 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCartItems(prevItems => {
+      // Debug: Verificar qué se está recibiendo
+      console.log('Agregando producto:', product.id, product.name);
+      console.log('Carrito actual:', prevItems);
+      
       const existingItem = prevItems.find(item => item.id === product.id);
       
       if (existingItem) {
+        console.log('Producto existente, incrementando cantidad');
         return prevItems.map(item =>
-          item.id === product.id 
+          item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       } else {
-        return [...prevItems, { ...product, quantity: 1 }];
+        console.log('Producto nuevo, agregando al carrito');
+        return [...prevItems, { 
+          ...product, 
+          quantity: 1,
+          // Asegurar que tenemos un ID único
+          id: product.id || Math.random().toString(36).substr(2, 9)
+        }];
       }
     });
   };

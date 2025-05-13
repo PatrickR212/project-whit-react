@@ -83,3 +83,37 @@ a {
     background-color: #f8f9fa;
     transition: background-color 0.3s ease;
   }
+
+  /* En tu archivo CSS global */
+.product-card {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.product-card .premium-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(45deg, #f9d423, #ff4e50);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 2;
+  transform: rotate(15deg);
+}
+
+.product-card .premium-badge::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+}

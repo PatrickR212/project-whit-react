@@ -1,4 +1,4 @@
-/* Estilos existentes que no cambian... */
+/* Estilos base del navbar */
 .navbar {
     background-color: #222;
     padding: 15px 30px;
@@ -8,13 +8,44 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-bottom: 2px solid #0077b6;
 }
 
-.navbar ul {
+/* Estilos del logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logoLink:hover {
+    transform: scale(1.05);
+}
+
+.logoImage {
+    height: 40px;
+    width: auto;
+}
+
+.logoText {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+/* Estilos de los enlaces de navegación */
+.navLinks {
     display: flex;
     list-style: none;
     justify-content: center;
@@ -23,7 +54,7 @@
     padding: 0;
 }
 
-.navbar a {
+.navLinks a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -31,9 +62,12 @@
     padding: 10px 15px;
     transition: color 0.3s ease, transform 0.2s;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.navbar a::after {
+.navLinks a::after {
     content: "";
     display: block;
     width: 0;
@@ -46,19 +80,82 @@
     transform: translateX(-50%);
 }
 
-.navbar a:hover {
+.navLinks a:hover {
     color: aqua;
     transform: scale(1.05);
 }
 
-.navbar a:hover::after {
+.navLinks a:hover::after {
     width: 100%;
+}
+
+/* Estilos de la sección de autenticación */
+.authSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.authLink, .profileLink {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+}
+
+.authLink:hover, .profileLink:hover {
+    color: aqua;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo especial para el botón de pasarelas */
+.pasarelaLink {
+    background: #0077b6;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.pasarelaLink:hover {
+    background: #0096c7;
+    transform: scale(1.05);
+}
+
+/* Estilos del botón de logout */
+.logoutButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+}
+
+.logoutButton:hover {
+    color: #ff6b81;
+    background: rgba(255, 0, 0, 0.1);
 }
 
 /* MEJORAS ESPECÍFICAS PARA EL CARRITO */
 .cartContainer {
     position: relative;
-    margin-left: 10px; /* Espacio adicional */
+    margin-left: 10px;
 }
 
 .cartLink {
@@ -79,20 +176,20 @@
 
 .cartBadge {
     position: absolute;
-    top: -5px;  /* Ajustado para mejor visibilidad */
-    right: -5px; /* Ajustado para mejor visibilidad */
+    top: -5px;
+    right: -5px;
     background-color: #ff4757;
     color: white;
     border-radius: 50%;
-    width: 22px; /* Tamaño fijo */
-    height: 22px; /* Tamaño fijo */
+    width: 22px;
+    height: 22px;
     font-size: 0.8rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: 1;
-    border: 2px solid #222; /* Borde para mejor contraste */
+    border: 2px solid #222;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -102,7 +199,30 @@
     background-color: #ff6b81;
 }
 
+/* Estado de carga */
+.navbar.loading {
+    justify-content: center;
+}
+
 /* Espacio para el navbar fijo */
 .mainContent {
     padding-top: 80px;
+}
+
+/* Estilos responsivos (opcional) */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .navLinks {
+        margin: 15px 0;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .authSection {
+        margin-top: 10px;
+    }
 }
