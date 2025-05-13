@@ -1,64 +1,64 @@
 ## ESTRUCTURA DEL PROYECTO
 
-my-project/
-├── .next/                     # Archivos generados por Next.js para compilación
-├── node_modules/              # Dependencias del proyecto
-├── public/
-│   └── assets/                # Recursos estáticos como imágenes y SVG
-│       ├── file.svg
-│       ├── globe.svg
-│       ├── next.svg
-│       ├── vercel.svg
-│       └── window.svg
-├── src/
-│   ├── app/
-│   │   ├── about/             # Página de información "About"
-│   │   │   └── page.js
-│   │   ├── admin/             # Sección de administración
-│   │   │   └── products/
-│   │   │       ├── edit/[id]/page.js   # Página para editar un producto por ID
-│   │   │       ├── new/page.js         # Página para crear un nuevo producto
-│   │   │       └── page.js             # Listado de productos
-│   │   ├── users/                      # Sección de administración de usuarios
-│   │   │   └── edit/[id]/page.js       # Página para editar un usuario por ID
-│   │   │   └── page.js                 # Listado de usuarios
-│   │   ├── api/send-email/route.js     # Ruta para enviar correos desde el frontend
-│   │   ├── auth/                       # Autenticación
-│   │   │   ├── login/page.js           # Página de login
-│   │   │   └── profile/page.js         # Página de perfil del usuario
-│   │   └── register/page.js            # Página de registro de usuarios
-│   ├── cart/
-│   │   └── page.js                     # Página del carrito de compras
-│   ├── components/                     # Componentes reutilizables
-│   │   ├── MapComponent.js             # Componente de mapa
-│   │   └── navbar.js                   # Componente de barra de navegación
-│   ├── contact/
-│   │   └── page.js                     # Página de contacto
-│   ├── lib/
-│   │   └── axios.config.js             # Configuración de Axios para peticiones HTTP
-│   ├── pasarelas/
-│   │   └── page.js                     # Página para pasarelas de pago
-│   ├── pqrs/
-│   │   └── page.js                     # Página para Peticiones, Quejas, Reclamos y Sugerencias
-│   ├── products/
-│   │   └── page.js                     # Listado de productos
-│   ├── users/
-│   │   └── page.js                     # Listado de usuarios
-│   ├── context/
-│   │   ├── AuthContext.js              # Contexto de autenticación
-│   │   └── CartContext.js              # Contexto del carrito de compras
-│   └── styles/                         # Estilos CSS
-│       ├── contact.css
-│       ├── globals.css
-│       ├── Navbar.module.css
-│       └── pqrs.module.css
-├── .env.local                          # Variables de entorno para el entorno local
-├── .gitignore                          # Archivos y carpetas ignoradas por Git
-├── jsconfig.json                       # Configuración de rutas para imports
-├── next.config.mjs                     # Configuración de Next.js
-├── package-lock.json                   # Bloqueo de versiones de dependencias
-├── package.json                        # Dependencias y scripts del proyecto
-└── README.md                           # Documentación del proyecto
+my-project/ <br>
+├── .next/                     # Archivos generados por Next.js para compilación<br>
+├── node_modules/              # Dependencias del proyecto<br>
+├── public/<br>
+│   └── assets/                # Recursos estáticos como imágenes y SVG<br>
+│       ├── file.svg<br>
+│       ├── globe.svg<br>
+│       ├── next.svg<br>
+│       ├── vercel.svg<br>
+│       └── window.svg<br>
+├── src/<br>
+│   ├── app/<br>
+│   │   ├── about/             # Página de información "About"<br>
+│   │   │   └── page.js<br>
+│   │   ├── admin/             # Sección de administración<br>
+│   │   │   └── products/<br>
+│   │   │       ├── edit/[id]/page.js   # Página para editar un producto por ID<br>
+│   │   │       ├── new/page.js         # Página para crear un nuevo producto<br>
+│   │   │       └── page.js             # Listado de productos<br>
+│   │   ├── users/                      # Sección de administración de usuarios<br>
+│   │   │   └── edit/[id]/page.js       # Página para editar un usuario por ID<br>
+│   │   │   └── page.js                 # Listado de usuarios<br>
+│   │   ├── api/send-email/route.js     # Ruta para enviar correos desde el frontend<br>
+│   │   ├── auth/                       # Autenticación<br>
+│   │   │   ├── login/page.js           # Página de login<br>
+│   │   │   └── profile/page.js         # Página de perfil del usuario<br>
+│   │   └── register/page.js            # Página de registro de usuarios<br>
+│   ├── cart/<br>
+│   │   └── page.js                     # Página del carrito de compras<br>
+│   ├── components/                     # Componentes reutilizables<br>
+│   │   ├── MapComponent.js             # Componente de mapa<br>
+│   │   └── navbar.js                   # Componente de barra de navegación<br>
+│   ├── contact/<br>
+│   │   └── page.js                     # Página de contacto<br>
+│   ├── lib/<br>
+│   │   └── axios.config.js             # Configuración de Axios para peticiones HTTP<br>
+│   ├── pasarelas/<br>
+│   │   └── page.js                     # Página para pasarelas de pago<br>
+│   ├── pqrs/<br>
+│   │   └── page.js                     # Página para Peticiones, Quejas, Reclamos y Sugerencias<br>
+│   ├── products/<br>
+│   │   └── page.js                     # Listado de productos<br>
+│   ├── users/<br>
+│   │   └── page.js                     # Listado de usuarios<br>
+│   ├── context/<br>
+│   │   ├── AuthContext.js              # Contexto de autenticación<br>
+│   │   └── CartContext.js              # Contexto del carrito de compras<br>
+│   └── styles/                         # Estilos CSS<br>
+│       ├── contact.css<br>
+│       ├── globals.css<br>
+│       ├── Navbar.module.css<br>
+│       └── pqrs.module.css<br>
+├── .env.local                          # Variables de entorno para el entorno local<br>
+├── .gitignore                          # Archivos y carpetas ignoradas por Git<br>
+├── jsconfig.json                       # Configuración de rutas para imports<br>
+├── next.config.mjs                     # Configuración de Next.js<br>
+├── package-lock.json                   # Bloqueo de versiones de dependencias<br>
+├── package.json                        # Dependencias y scripts del proyecto<br>
+└── README.md                           # Documentación del proyecto<br>
 
 
 ## CARACTERISTICAS
